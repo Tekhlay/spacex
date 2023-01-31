@@ -1,10 +1,16 @@
-import React from 'react';
+/* eslint-disable import/no-extraneous-dependencies */
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
+import MyProfile from './components/MyProfile';
 
 function App() {
   return (
-    <nav>
-      <h1> Space Travelers Hub</h1>
-    </nav>
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/myprofile" element={<MyProfile />} />
+      </Routes>
+    </Router>
   );
 }
 
